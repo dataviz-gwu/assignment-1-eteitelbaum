@@ -15,8 +15,19 @@ format: html
 *Make sure to load the packages that you need and `glimpse()` the data or `View()` it to make sure that it downloaded properly.* 
 
 ```{r}
+library(vdemdata)
+library(dplyr)
 
+vdem_vars <- vdem |>
+  select(
+    year, 
+    country_name,
+    v2x_polyarchy
+  ) |>
+  filter(year > 1990)
 ```
+
+
 
 ## Step 2: Download data from the World Bank
 
@@ -45,3 +56,4 @@ format: html
 
 *Write a paragraph or so relating your insights to the Norris reading about electoral reform and women's representation. Picking a handful of country cases from your data, how does your analysis relate to her arguments about the relevance of electoral systems, statutory quotas, reserved seats or voluntary quotas?* 
 
+Now I am going to write a paragraph explaining how my findings relate to the reading, etc. 
